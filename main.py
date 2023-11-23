@@ -51,21 +51,21 @@ print(country_musical_trends)
 diversity_by_country = songs.groupby('Country')['Song'].nunique().sort_values(ascending=False)
 
 # 5. Examine the distribution of publication dates
-sns.histplot(data=df, x='Publication Date', bins=20, kde=True)
+sns.histplot(data=songs, x='Publication Date', bins=20, kde=True)
 plt.title('Distribution of Publication Dates')
 plt.show()
 
 # 6. Identify most frequently featured artists globally
-top_artists_global = df['Artist'].value_counts().head(10)
+top_artists_global = songs['Artist'].value_counts().head(10)
 
 # 7. Investigate the correlation between musical aspects and popularity ranking
-correlation_matrix = df[['Energy', 'Liveness', 'Acousticness', 'Popularity']].corr()
+correlation_matrix = songs[['Energy', 'Liveness', 'Acousticness', 'Popularity']].corr()
 
 # 8. Track the consistency of song popularity within a country over time
-popularity_over_time = df.groupby(['Country', 'Song'])['Popularity'].mean()
+popularity_over_time = songs.groupby(['Country', 'Song'])['Popularity'].mean()
 
 # 9. Identify songs with regional popularity variations
-regional_variations = df.groupby(['Song', 'Country']).size().unstack(fill_value=0)
+regional_variations = songs.groupby(['Song', 'Country']).size().unstack(fill_value=0)
 
 # 10. Conduct outlier analysis for song popularity
 sns.boxplot(x='Popularity rank', y='Popularity', data=songs)
