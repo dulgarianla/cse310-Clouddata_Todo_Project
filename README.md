@@ -2,11 +2,12 @@
 Welcome to the overview of today's code and what the purpose of it.
 
 This dataset offers a panoramic view of Spotify's Top-50 playlists across 73 countries during the 45th week of 2023 (6th November - 12th November). Derived directly from the Spotify Official API, the dataset encapsulates a rich array of information. It includes details such as song names, artists, publication dates, and the respective countries for each track. Delving deeper, the dataset features columns dedicated to various musical aspects, providing a comprehensive exploration of the elements that contribute to the popularity and characteristics of the songs showcased on Spotify's global playlists.
+[Spotify's Top-50 playlists Dataset](https://www.kaggle.com/datasets/miquelneck/worlds-spotify-top-50-playlist-musicality-data)
 
 The software analyzes a musicality dataset to uncover relationships between features like "Energy," "Liveness," and "Acousticness" and a song's popularity. It categorizes songs based on popularity scores and uses a K-Nearest Neighbors (KNN) classifier to predict popularity ranks. The process includes exploratory data analysis (EDA) and training the KNN model with varying numbers of neighbors. A matplotlib graph visualizes how training and testing accuracies change with different neighbors, aiding in identifying optimal configurations. This tool offers insights into the influence of musical features on song popularity through a combination of EDA and machine learning techniques.
 
 [Software Demo Video](http://youtube.link.goes.here)
-*Note I didnt have time to create a demo video*
+*Note I didn't have time to create a demo video*
 
 # Data Analysis Results
 1. Which songs were the most popular globally during the 45th week of 2023?
@@ -64,15 +65,17 @@ Kaggle is an online platform that provides a collaborative environment for data 
 [Kaggle](https://www.kaggle.com/)
 
 # Useful Websites
+Down below are websites that I used to help learn and better my understanding of SQL and it might help you if you want to learn the language too
 
-{Make a list of websites that you found helpful in this project}
 * [geeksforgeeks (Data with Python)](https://www.geeksforgeeks.org/data-analysis-with-python/)
 
 * [geeksforgeek (Data using pandas)](https://www.geeksforgeeks.org/python-data-analysis-using-pandas/)
 
 # Future Work
+Here is some things that I could have added or even improve to make the software more advance
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+- **Consistent Styling**: Ensure consistent indentation and styling throughout the code to enhance visual clarity.
+
+- **Code Testing**: Consider writing unit tests, especially for critical functions or logic, to ensure that changes or modifications do not introduce unexpected issues.
+
+- **Memory Efficiency**: Optimize memory usage, especially for large datasets, by using appropriate data types and avoiding unnecessary copies of data.
