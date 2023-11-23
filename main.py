@@ -48,7 +48,7 @@ print("Country-wise Musical Characteristics:")
 print(country_musical_trends)
 
 # 4. Determine countries with the most diverse musical preferences
-diversity_by_country = df.groupby('Country')['Song'].nunique().sort_values(ascending=False)
+diversity_by_country = songs.groupby('Country')['Song'].nunique().sort_values(ascending=False)
 
 # 5. Examine the distribution of publication dates
 sns.histplot(data=df, x='Publication Date', bins=20, kde=True)
@@ -68,8 +68,10 @@ popularity_over_time = df.groupby(['Country', 'Song'])['Popularity'].mean()
 regional_variations = df.groupby(['Song', 'Country']).size().unstack(fill_value=0)
 
 # 10. Conduct outlier analysis for song popularity
-sns.boxplot(x='Popularity', data=df)
-plt.title('Boxplot of Song Popularity')
+sns.boxplot(x='Popularity rank', y='Popularity', data=songs)
+plt.title('Boxplot of Song Popularity by Rank')
+plt.xlabel('Popularity Rank')
+plt.ylabel('Popularity')
 plt.show()
 
 # Making model, as well as setting a for loop to iterate through different neighbor values
